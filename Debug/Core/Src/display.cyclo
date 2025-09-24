@@ -1,0 +1,7 @@
+../Core/Src/display.c:15:23:get_font	5
+../Core/Src/display.c:28:6:inicializarDisplay	1
+../Core/Src/display.c:32:6:limparDisplay	1
+../Core/Src/display.c:37:6:mostrarMensagemUnica	1
+../Core/Src/display.c:44:6:mostrarMensagemComTitulo	2
+../Core/Src/display.c:62:6:mostraMensagemNaPosicaoAt	1
+../Core/Src/display.c:76:6:mostrarMensagemPaginada	5

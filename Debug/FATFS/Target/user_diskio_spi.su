@@ -1,0 +1,12 @@
+../FATFS/Target/user_diskio_spi.c:21:13:SD_CS_Select	8	static
+../FATFS/Target/user_diskio_spi.c:25:13:SD_CS_Deselect	8	static
+../FATFS/Target/user_diskio_spi.c:29:16:SPI_TxRx	32	static
+../FATFS/Target/user_diskio_spi.c:35:13:SPI_Tx	16	static
+../FATFS/Target/user_diskio_spi.c:39:16:SPI_Rx	8	static
+../FATFS/Target/user_diskio_spi.c:44:16:wait_ready	16	static
+../FATFS/Target/user_diskio_spi.c:54:13:send_cmd	24	static
+../FATFS/Target/user_diskio_spi.c:89:9:USER_SPI_initialize	40	static
+../FATFS/Target/user_diskio_spi.c:120:9:USER_SPI_status	16	static
+../FATFS/Target/user_diskio_spi.c:124:9:USER_SPI_read	40	static
+../FATFS/Target/user_diskio_spi.c:148:9:USER_SPI_write	32	static
+../FATFS/Target/user_diskio_spi.c:174:9:USER_SPI_ioctl	16	static

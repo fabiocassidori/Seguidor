@@ -1,0 +1,7 @@
+../Core/Src/display.c:15:23:get_font	16	static
+../Core/Src/display.c:28:6:inicializarDisplay	8	static
+../Core/Src/display.c:32:6:limparDisplay	8	static
+../Core/Src/display.c:37:6:mostrarMensagemUnica	24	static
+../Core/Src/display.c:44:6:mostrarMensagemComTitulo	56	static
+../Core/Src/display.c:62:6:mostraMensagemNaPosicaoAt	40	static
+../Core/Src/display.c:76:6:mostrarMensagemPaginada	120	dynamic

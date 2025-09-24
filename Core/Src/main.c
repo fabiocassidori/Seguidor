@@ -22,10 +22,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "ssd1306.h"
-#include "ssd1306_fonts.h"
-#include <string.h> // Necessário para as funções strlen() e strcpy()
-#include <stdio.h>  // Necessário para a função sprintf()
+#include "display.h"
+#include "sd.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -49,6 +47,7 @@ I2C_HandleTypeDef hi2c2;
 SPI_HandleTypeDef hspi3;
 
 /* USER CODE BEGIN PV */
+
 
 /* USER CODE END PV */
 
@@ -99,12 +98,39 @@ int main(void)
   MX_SPI3_Init();
   MX_FATFS_Init();
   /* USER CODE BEGIN 2 */
-  ssd1306_Init();
-  ssd1306_Fill(Black);
-  ssd1306_SetCursor(2, 0);
-  ssd1306_WriteString("Iniciando SD...", Font_7x10, White);
-  ssd1306_UpdateScreen();
-  HAL_Delay(1000);
+  inicializarDisplay();
+
+  mostrarMensagemComTitulo("Inicializando", "Sistema Ligado...", 2000);
+
+  // Monta o Cartão SD e reporta o status
+  inicializaMontarCartao();
+
+  // Obtém informações do cartão e exibe no display
+  inicializaMostrarDetalhesCartao();
+
+  // Grava um log no cartão SD
+  mostrarMensagemComTitulo("GRAVANDO...", "Escrevendo no log...", 1000);
+  if (adicionaStringAoArquivo("log.txt", "Mensagem Gravada ao Arquivo!\r\n") == HAL_OK) {
+	  mostrarMensagemComTitulo("SUCESSO", "Log gravado no SD!", 2000);
+  } else {
+	  mostrarMensagemComTitulo("ERRO", "Falha ao gravar log!", 2000);
+  }
+
+  // Desmonta o cartão (opcional, boa prática se não for usar mais)
+  desmontarCartaoSD();
+
+  // Crie uma string longa para teste
+  char* long_message = "Este e um teste de uma mensagem muito longa que nao cabe em uma unica linha do display. O sistema deve quebrar o texto em varias linhas e, se necessario, em varias paginas. Testando 1, 2, 3.";
+
+  // Chame a nova função em vez da antiga
+  // A função cuidará da paginação e dos delays automaticamente.
+  mostrarMensagemPaginada("Log Detalhado", long_message, 6000);
+
+  // Espera um pouco antes de continuar
+  HAL_Delay(6000);
+
+  // Você pode continuar usando a função antiga para mensagens curtas
+  mostrarMensagemComTitulo("SUCESSO", "Operacao finalizada!", 2000);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -114,24 +140,7 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-  // Limpa o buffer da tela (não a tela física)
-  ssd1306_Fill(Black);
 
-  // Formata uma string com o valor do contador
-  //sprintf(buffer, "Contador: %d", counter++);
-  ssd1306_SetCursor(2, 0);
-  ssd1306_WriteString("Oi Alicia!", Font_11x18, White);
-  // Escreve a string na tela
-  ssd1306_SetCursor(2, 20);
-  ssd1306_WriteString("Tudo bem?", Font_11x18, White);
-  ssd1306_SetCursor(2, 40);
-  ssd1306_WriteString("Me chamo Robozinho!", Font_7x10, White);
-
-  // Atualiza a tela com o novo conteúdo do buffer
-  ssd1306_UpdateScreen();
-
-  // Espera 100 milissegundos
-  HAL_Delay(100);
   }
   /* USER CODE END 3 */
 }

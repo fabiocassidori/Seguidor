@@ -1,0 +1,6 @@
+../Core/Src/sd.c:20:6:inicializaMontarCartao	8	static
+../Core/Src/sd.c:29:6:inicializaMostrarDetalhesCartao	8	static
+../Core/Src/sd.c:38:19:montarCartaoSD	16	static
+../Core/Src/sd.c:46:19:desmontarCartaoSD	16	static
+../Core/Src/sd.c:54:19:mostraDetalhesCartaoSD	32	static
+../Core/Src/sd.c:69:19:adicionaStringAoArquivo	24	static

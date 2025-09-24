@@ -1,7 +1,4 @@
-FATFS/Target/user_diskio.o: ../FATFS/Target/user_diskio.c \
- ../FATFS/Target/user_diskio_spi.h \
- ../Middlewares/Third_Party/FatFs/src/diskio.h \
- ../Middlewares/Third_Party/FatFs/src/integer.h \
+Core/Src/display.o: ../Core/Src/display.c ../Core/Inc/display.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h \
  ../Core/Inc/stm32f4xx_hal_conf.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h \
@@ -30,13 +27,11 @@ FATFS/Target/user_diskio.o: ../FATFS/Target/user_diskio.c \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h \
- ../Middlewares/Third_Party/FatFs/src/ff_gen_drv.h \
- ../Middlewares/Third_Party/FatFs/src/diskio.h \
- ../Middlewares/Third_Party/FatFs/src/ff.h ../FATFS/Target/ffconf.h \
- ../Core/Inc/main.h
-../FATFS/Target/user_diskio_spi.h:
-../Middlewares/Third_Party/FatFs/src/diskio.h:
-../Middlewares/Third_Party/FatFs/src/integer.h:
+ C:/Users/jlour/Documents/ROBOTICA/SEGUIDOR\ DE\ LINHA/ROBO\ -\ STM32F405/Novo/Seguidor/Drivers/OLED/ssd1306.h \
+ C:/Users/jlour/Documents/ROBOTICA/SEGUIDOR\ DE\ LINHA/ROBO\ -\ STM32F405/Novo/Seguidor/Drivers/OLED/ssd1306_conf.h \
+ C:/Users/jlour/Documents/ROBOTICA/SEGUIDOR\ DE\ LINHA/ROBO\ -\ STM32F405/Novo/Seguidor/Drivers/OLED/ssd1306_fonts.h \
+ C:/Users/jlour/Documents/ROBOTICA/SEGUIDOR\ DE\ LINHA/ROBO\ -\ STM32F405/Novo/Seguidor/Drivers/OLED/ssd1306.h
+../Core/Inc/display.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 ../Core/Inc/stm32f4xx_hal_conf.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h:
@@ -65,8 +60,7 @@ FATFS/Target/user_diskio.o: ../FATFS/Target/user_diskio.c \
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h:
-../Middlewares/Third_Party/FatFs/src/ff_gen_drv.h:
-../Middlewares/Third_Party/FatFs/src/diskio.h:
-../Middlewares/Third_Party/FatFs/src/ff.h:
-../FATFS/Target/ffconf.h:
-../Core/Inc/main.h:
+C:/Users/jlour/Documents/ROBOTICA/SEGUIDOR\ DE\ LINHA/ROBO\ -\ STM32F405/Novo/Seguidor/Drivers/OLED/ssd1306.h:
+C:/Users/jlour/Documents/ROBOTICA/SEGUIDOR\ DE\ LINHA/ROBO\ -\ STM32F405/Novo/Seguidor/Drivers/OLED/ssd1306_conf.h:
+C:/Users/jlour/Documents/ROBOTICA/SEGUIDOR\ DE\ LINHA/ROBO\ -\ STM32F405/Novo/Seguidor/Drivers/OLED/ssd1306_fonts.h:
+C:/Users/jlour/Documents/ROBOTICA/SEGUIDOR\ DE\ LINHA/ROBO\ -\ STM32F405/Novo/Seguidor/Drivers/OLED/ssd1306.h:

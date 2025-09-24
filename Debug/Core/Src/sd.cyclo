@@ -1,0 +1,6 @@
+../Core/Src/sd.c:20:6:inicializaMontarCartao	2
+../Core/Src/sd.c:29:6:inicializaMostrarDetalhesCartao	2
+../Core/Src/sd.c:38:19:montarCartaoSD	2
+../Core/Src/sd.c:46:19:desmontarCartaoSD	2
+../Core/Src/sd.c:54:19:mostraDetalhesCartaoSD	2
+../Core/Src/sd.c:69:19:adicionaStringAoArquivo	3
